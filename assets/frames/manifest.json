@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "background": "#050706",
+  "sets": {
+    "desktop": {
+      "count": 120,
+      "width": 1600,
+      "height": 900,
+      "pattern": "desktop/f_{i}.webp",
+      "pad": 3
+    },
+    "mobile": {
+      "count": 120,
+      "width": 720,
+      "height": 720,
+      "pattern": "mobile/f_{i}.webp",
+      "pad": 3
+    }
+  }
+}

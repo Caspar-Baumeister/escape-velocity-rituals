@@ -163,6 +163,15 @@
       ctx.fillStyle = bg; ctx.fillRect(0, 0, cw, ch);
       ctx.drawImage(im, x, y, dw, dh);
       feather(x, y, dw, dh, Math.round(Math.min(dw, dh) * 0.12));
+      // elliptical vignette so the frame melts into the scene and no box edge shows
+      ctx.save();
+      ctx.translate(x + dw / 2, y + dh * OBJ.cy);
+      ctx.scale(dw / dh, 1);
+      var vg = ctx.createRadialGradient(0, 0, dh * 0.40, 0, 0, dh * 0.54);
+      vg.addColorStop(0, "rgba(2,4,6,0)"); vg.addColorStop(1, bg);
+      ctx.fillStyle = vg;
+      ctx.fillRect(-dh / 2 - 2, -dh * OBJ.cy - 2, dh + 4, dh + 4);
+      ctx.restore();
     }
     function load(i) {
       if (imgs[i]) return imgs[i]._p;

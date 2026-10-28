@@ -65,7 +65,7 @@
     if (!box) return;
     giant.style.fontSize = "100px";
     var w = giant.scrollWidth || 1;
-    var target = box * (window.innerWidth < 760 ? 0.94 : 0.965);
+    var target = box * (window.innerWidth < 760 ? 0.92 : 0.94);
     giant.style.fontSize = Math.max(28, Math.floor(100 * target / w)) + "px";
   }
 
@@ -219,7 +219,7 @@
     tl.fromTo(".cap-2", { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: 0.06 }, 0.6)
       .to(".cap-2", { autoAlpha: 0, y: -22, duration: 0.06 }, 0.82);
     tl.fromTo(".cap-3", { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: 0.06 }, 0.88);
-    tl.fromTo(".giant-line", { xPercent: 1.6 }, { xPercent: -1.6, duration: 1, ease: "none" }, 0);
+    tl.fromTo(".giant-line", { xPercent: 0 }, { xPercent: -2, duration: 1, ease: "none" }, 0);
   }
 
   function startSequence(manifest) {

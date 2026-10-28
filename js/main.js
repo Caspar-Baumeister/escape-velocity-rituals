@@ -313,6 +313,7 @@
     if (f.firstName) b.set("firstName", f.firstName);
     b.set("userGroup", cfg.loopsUserGroup || "waitlist");
     b.set("source", f.source);
+    if (cfg.loopsMailingLists) b.set("mailingLists", cfg.loopsMailingLists);
     if (cfg.loopsSendExtras) {
       if (f.sauna) b.set("saunaFrequency", f.sauna);
       b.set("language", f.lang);

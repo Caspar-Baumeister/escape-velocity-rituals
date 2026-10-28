@@ -50,7 +50,7 @@
     $$("[data-fill-mail]").forEach(function (el) { el.textContent = cfg.contactEmail || el.textContent; el.href = "mailto:" + (cfg.contactEmail || ""); });
     $$(".split").forEach(splitLines);
     $$(".split.seen").forEach(function (el) { el.classList.add("in"); });
-    if (dict[l].meta_title) document.title = t("meta_title");
+    if (dict[l].meta_title && $("#hero")) document.title = t("meta_title");
     var md = $('meta[name="description"]'); if (md && dict[l].meta_desc) md.setAttribute("content", t("meta_desc"));
     $$(".lang [data-lang]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === l)); });
     $$(".wl").forEach(function (f) { var m = $(".wl-msg", f); if (m && m.dataset.key) m.textContent = t(m.dataset.key); });

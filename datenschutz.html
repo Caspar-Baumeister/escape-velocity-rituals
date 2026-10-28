@@ -5,18 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Datenschutz · Escape Velocity Rituals</title>
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#050706">
+<meta name="theme-color" content="#030405">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="stylesheet" href="css/style.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/analytics.js"></script>
 </head>
 <body>
-<header class="bar solid">
-  <a class="brand" href="index.html" aria-label="Escape Velocity Rituals, zur Startseite">
-    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    <span class="wordmark"><span class="wm-1">Escape Velocity</span><span class="wm-2">Rituals</span></span>
+<header class="bar solid page-bar" id="bar">
+  <nav class="bar-links" aria-label="Seite">
+    <a href="index.html#ritual" data-i18n="nav_core">Cold Core</a>
+    <a href="index.html#science" data-i18n="nav_science">Forschung</a>
+    <a href="index.html#faq" data-i18n="nav_faq">Fragen</a>
+  </nav>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <a class="wordmark" href="index.html" aria-label="Escape Velocity Rituals, zur Startseite">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Escape Velocity</span>
   </a>
-  <nav class="bar-actions"><a class="btn btn-small" href="index.html#waitlist">Warteliste</a></nav>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <div class="bar-right">
+    <a class="bar-cta" href="index.html#waitlist"><span data-i18n="nav_cta">Warteliste</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+  </div>
 </header>
 <main class="legal">
 <h1>Datenschutzerklärung</h1>
@@ -27,39 +39,56 @@
 
 <h2>2. Das Wichtigste in Kürze</h2>
 <ul>
-  <li>Diese Seite setzt keine Cookies und nutzt kein Tracking und keine Analyse-Tools.</li>
-  <li>Schriften und Skripte liegen auf unserem eigenen Webspace. Es werden keine Google Fonts oder andere externe Bibliotheken nachgeladen.</li>
-  <li>Daten erheben wir nur, wenn du dich in die Warteliste einträgst.</li>
+  <li>Schriften und Skripte liegen auf unserem eigenen Webspace. Es werden keine Google Fonts nachgeladen.</li>
+  <li data-when="posthog">Wir messen anonym und ohne Cookies, wie die Seite genutzt wird (PostHog, Server in der EU).</li>
+  <li data-when="pixel">Den Meta Pixel laden wir nur, wenn du im Banner ausdrücklich zustimmst.</li>
+  <li>Daten zu deiner Person erheben wir nur, wenn du dich in die Warteliste einträgst.</li>
 </ul>
 
 <h2>3. Hosting und Server-Logfiles</h2>
 <p>Die Seite wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seite verarbeitet GitHub technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und Uhrzeit des Abrufs, die aufgerufene Datei, den Browser und das Betriebssystem. Das ist nötig, um die Seite auszuliefern und vor Missbrauch zu schützen. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und funktionierenden Website nach Art. 6 Abs. 1 lit. f DSGVO. GitHub kann Daten in den USA verarbeiten. Die Übermittlung stützt sich auf das EU-US Data Privacy Framework, unter dem GitHub zertifiziert ist, sowie auf Standardvertragsklauseln. Mehr dazu in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">docs.github.com</a>.</p>
 
-<h2>4. Warteliste</h2>
-<p>Wenn du dich in die Warteliste einträgst, verarbeiten wir deine E-Mail-Adresse und, falls du sie angibst, deinen Vornamen und wie oft du in die Sauna gehst. Außerdem speichern wir, wann und über welches Formular du dich eingetragen hast, damit wir deine Einwilligung nachweisen können.</p>
-<p>Zweck: Wir informieren dich, wenn Cold Core verfügbar ist, und schicken dir den Early-Access-Vorteil. Die Angabe zur Sauna hilft uns, das Produkt zu entwickeln. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen, eine kurze Mail an uns genügt. Jede unserer Mails enthält außerdem einen Hinweis, wie du dich abmeldest.</p>
-<p data-provider="formsubmit">Für die Übermittlung des Formulars nutzen wir FormSubmit (<a href="https://formsubmit.co" rel="noopener" target="_blank">formsubmit.co</a>). Der Dienst nimmt die Formulardaten entgegen und leitet sie per E-Mail an uns weiter. Dabei verarbeitet FormSubmit auch deine IP-Adresse. FormSubmit kann Daten außerhalb der EU verarbeiten, auch in Ländern ohne Angemessenheitsbeschluss der EU-Kommission. Mit deiner Einwilligung in die Warteliste willigst du ausdrücklich auch in diese Übermittlung ein (Art. 49 Abs. 1 lit. a DSGVO). Dabei besteht das Risiko, dass Behörden dort auf die Daten zugreifen und dir weniger Rechtsschutz zur Verfügung steht als in der EU.</p>
-<p data-provider="web3forms" hidden>Für die Übermittlung des Formulars nutzen wir Web3Forms, einen Dienst von Web3Creative mit Sitz in Indien. Web3Forms nimmt die Formulardaten entgegen, prüft sie auf Spam und leitet sie per E-Mail an uns weiter. Dabei werden auch deine IP-Adresse und deine E-Mail-Adresse an Spam-Prüfdienste übermittelt. Web3Forms setzt Unterauftragnehmer wie Amazon Web Services, Hetzner und Cloudflare ein und kann Daten außerhalb der EU verarbeiten. Grundlage dafür sind die Standardvertragsklauseln der EU-Kommission, die in den Auftragsverarbeitungsbedingungen von Web3Forms enthalten sind (<a href="https://web3forms.com/dpa" rel="noopener" target="_blank">web3forms.com/dpa</a>). Web3Forms speichert Einsendungen laut eigenen Angaben bis zu drei Jahre.</p>
-<p>Die Eintragungen erreichen uns per E-Mail in einem Postfach bei Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Wir speichern deine Daten, bis du deine Einwilligung widerrufst oder bis wir die Warteliste nach dem Verkaufsstart nicht mehr brauchen. Danach löschen wir sie.</p>
+<h2 data-when="posthog">4. Reichweitenmessung ohne Cookies (PostHog)</h2>
+<p data-when="posthog">Um zu verstehen, welche Teile der Seite gelesen werden und an welcher Stelle Besucher abspringen, nutzen wir PostHog in der EU-Cloud (PostHog Inc., 2261 Market Street #4008, San Francisco, CA 94114, USA; Server in Frankfurt am Main). Erfasst werden zum Beispiel aufgerufene Seiten, wie weit gescrollt wurde, welche Abschnitte sichtbar waren, Klicks auf Wartelisten-Buttons, ob das Formular begonnen oder abgeschickt wurde, die Sprache, die Bildschirmgröße sowie Kampagnenangaben aus dem Link (zum Beispiel utm_source oder ob du über eine Anzeige kamst).</p>
+<p data-when="posthog">PostHog läuft bei uns im cookielosen Modus: Auf deinem Gerät wird nichts gespeichert oder ausgelesen, es werden keine Cookies, kein Local Storage und keine Geräte-IDs verwendet. Um Besuche zu zählen, bildet PostHog auf dem Server aus IP-Adresse und Browserkennung einen Hashwert mit einem täglich wechselnden Schlüssel. Die IP-Adresse selbst speichern wir nicht. Wir legen keine Profile über dich an und verknüpfen diese Daten nicht mit deiner E-Mail-Adresse. Rechtsgrundlage ist unser berechtigtes Interesse, die Seite und unsere Werbung zu verbessern, Art. 6 Abs. 1 lit. f DSGVO. Du kannst dem jederzeit widersprechen, eine kurze Mail genügt. Mit PostHog besteht ein Auftragsverarbeitungsvertrag mit Standardvertragsklauseln. Die Daten werden nach spätestens 12 Monaten gelöscht.</p>
 
-<h2>5. Kontakt per E-Mail</h2>
+<h2 data-when="pixel">5. Meta Pixel (nur mit Einwilligung)</h2>
+<p data-when="pixel">Wenn du im Banner auf „Erlauben“ klickst, laden wir den Meta Pixel der Meta Platforms Ireland Ltd., Merrion Road, Dublin 4, Irland. Damit können wir messen, ob unsere Anzeigen auf Instagram und Facebook dazu führen, dass sich jemand in die Warteliste einträgt, und Anzeigen an Menschen ausspielen, die sich dafür interessieren könnten. Dabei setzt Meta Cookies und verarbeitet unter anderem deine IP-Adresse, Browserdaten, die aufgerufenen Seiten und die Ereignisse „Seite angesehen“, „Inhalt angesehen“ und „Eintrag in die Warteliste“. Deine E-Mail-Adresse geben wir nicht an Meta weiter. Meta kann diese Daten mit deinem Konto verbinden und auch in den USA verarbeiten; die Übermittlung stützt sich auf das EU-US Data Privacy Framework.</p>
+<p data-when="pixel">Rechtsgrundlage ist deine Einwilligung nach § 25 Abs. 1 TDDDG und Art. 6 Abs. 1 lit. a DSGVO. Für die Erhebung und Übermittlung der Daten an Meta sind wir gemeinsam mit Meta verantwortlich (Art. 26 DSGVO, <a href="https://www.facebook.com/legal/controller_addendum" rel="noopener" target="_blank">Vereinbarung mit Meta</a>). Ohne deine Zustimmung wird der Pixel nicht geladen. Du kannst deine Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf der Seite ändern. Mehr bei Meta: <a href="https://www.facebook.com/privacy/policy/" rel="noopener" target="_blank">facebook.com/privacy/policy</a>.</p>
+<p data-when="pixel">Deine Entscheidung im Banner speichern wir im Local Storage deines Browsers, damit wir nicht bei jedem Besuch erneut fragen. Rechtsgrundlage dafür ist § 25 Abs. 2 Nr. 2 TDDDG.</p>
+
+<h2>6. Warteliste</h2>
+<p>Wenn du dich in die Warteliste einträgst, verarbeiten wir deine E-Mail-Adresse und, falls du sie angibst, deinen Vornamen und wie oft du in die Sauna gehst. Außerdem speichern wir, wann und über welche Kampagne du dich eingetragen hast, damit wir deine Einwilligung nachweisen und sehen können, welche Kanäle funktionieren.</p>
+<p>Zweck: Wir informieren dich, wenn Cold Core verfügbar ist, und schicken dir den Early-Access-Vorteil. Die Angabe zur Sauna hilft uns, das Produkt zu entwickeln. Rechtsgrundlage ist deine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO. Du kannst sie jederzeit mit Wirkung für die Zukunft widerrufen: über den Abmeldelink in jeder Mail oder mit einer kurzen Mail an uns.</p>
+<p data-when="doi">Wir nutzen das Double-Opt-in-Verfahren: Nach dem Eintragen bekommst du eine Mail mit einem Bestätigungslink. Erst wenn du darauf klickst, stehst du auf der Liste. Den Zeitpunkt der Anmeldung und der Bestätigung speichern wir als Nachweis.</p>
+<p data-provider="loops" hidden>Für die Warteliste und den Versand unserer Mails nutzen wir Loops (Loops.so, Inc., USA). Loops speichert deine Angaben in unserem Auftrag und verschickt die Mails. Loops kann Daten in den USA verarbeiten. Grundlage dafür sind ein Auftragsverarbeitungsvertrag und die Standardvertragsklauseln der EU-Kommission. Mehr dazu: <a href="https://loops.so/privacy" rel="noopener" target="_blank">loops.so/privacy</a>.</p>
+<p data-provider="brevo" hidden>Für die Warteliste und den Versand unserer Mails nutzen wir Brevo (Sendinblue SAS, 106 boulevard Haussmann, 75008 Paris, Frankreich). Brevo speichert deine Angaben in unserem Auftrag auf Servern in der EU und verschickt die Mails. Mit Brevo besteht ein Auftragsverarbeitungsvertrag. Mehr dazu: <a href="https://www.brevo.com/de/legal/privacypolicy/" rel="noopener" target="_blank">brevo.com</a>.</p>
+<p data-provider="formsubmit">Für die Übermittlung des Formulars nutzen wir FormSubmit (<a href="https://formsubmit.co" rel="noopener" target="_blank">formsubmit.co</a>). Der Dienst nimmt die Formulardaten entgegen und leitet sie per E-Mail an uns weiter. Dabei verarbeitet FormSubmit auch deine IP-Adresse. FormSubmit kann Daten außerhalb der EU verarbeiten, auch in Ländern ohne Angemessenheitsbeschluss der EU-Kommission. Mit deiner Einwilligung in die Warteliste willigst du ausdrücklich auch in diese Übermittlung ein (Art. 49 Abs. 1 lit. a DSGVO). Dabei besteht das Risiko, dass Behörden dort auf die Daten zugreifen und dir weniger Rechtsschutz zur Verfügung steht als in der EU. Die Eintragungen erreichen uns per E-Mail in einem Postfach bei Google (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland).</p>
+<p>Wir speichern deine Daten, bis du deine Einwilligung widerrufst oder bis wir die Warteliste nach dem Verkaufsstart nicht mehr brauchen. Danach löschen wir sie.</p>
+
+<h2>7. Kontakt per E-Mail</h2>
 <p>Wenn du uns schreibst, verarbeiten wir deine Angaben, um deine Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b oder f DSGVO.</p>
 
-<h2>6. Deine Rechte</h2>
+<h2>8. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21). Eine erteilte Einwilligung kannst du jederzeit widerrufen (Art. 7 Abs. 3). Schreib uns dafür einfach eine E-Mail.</p>
 <p>Du kannst dich außerdem bei einer Datenschutzaufsichtsbehörde beschweren, zum Beispiel bei der Berliner Beauftragten für Datenschutz und Informationsfreiheit, Alt-Moabit 59 bis 61, 10555 Berlin.</p>
 
-<h2>7. Keine automatisierte Entscheidung</h2>
-<p>Wir treffen keine automatisierten Entscheidungen und erstellen keine Profile.</p>
+<h2>9. Keine automatisierte Entscheidung</h2>
+<p>Wir treffen keine automatisierten Entscheidungen im Sinne von Art. 22 DSGVO.</p>
 </main>
-<script src="config.js"></script>
-<script>(function(){var p=(window.EVR_CONFIG||{}).formProvider||"formsubmit";document.querySelectorAll("[data-provider]").forEach(function(el){el.hidden=el.getAttribute("data-provider")!==p;});})();</script>
-<footer class="foot">
-  <div class="foot-brand">
-    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    <p>Escape Velocity Rituals. Kleine Rituale für ein langes Leben.</p>
-  </div>
-  <nav class="foot-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><span>© 2026</span></nav>
+<script>(function(){
+  var c=window.EVR_CONFIG||{}, p=c.formProvider||"formsubmit";
+  document.querySelectorAll("[data-provider]").forEach(function(el){el.hidden=el.getAttribute("data-provider")!==p;});
+  var on={posthog:!!c.posthogKey,pixel:!!c.metaPixelId,doi:!!c.doubleOptIn};
+  document.querySelectorAll("[data-when]").forEach(function(el){el.hidden=!on[el.getAttribute("data-when")];});
+  var n=0; document.querySelectorAll(".legal h2").forEach(function(h){ if(h.hidden) return; n++; h.textContent=h.textContent.replace(/^\d+\.\s*/, n+". "); });
+})();</script>
+
+<footer class="legal-foot">
+  <span>© 2026 Escape Velocity Rituals</span>
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="#" data-consent-open hidden>Cookie-Einstellungen</a>
 </footer>
 </body>
 </html>

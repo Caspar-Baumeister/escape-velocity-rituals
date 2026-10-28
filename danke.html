@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bestätigt · Escape Velocity Rituals</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#030405">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/analytics.js"></script>
+</head>
+<body>
+<header class="bar solid page-bar" id="bar">
+  <nav class="bar-links" aria-label="Seite">
+    <a href="index.html#ritual" data-i18n="nav_core">Cold Core</a>
+    <a href="index.html#science" data-i18n="nav_science">Forschung</a>
+    <a href="index.html#faq" data-i18n="nav_faq">Fragen</a>
+  </nav>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <a class="wordmark" href="index.html" aria-label="Escape Velocity Rituals, zur Startseite">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Escape Velocity</span>
+  </a>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <div class="bar-right">
+    <a class="bar-cta" href="index.html#waitlist"><span data-i18n="nav_cta">Warteliste</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+  </div>
+</header>
+
+<main>
+  <section class="thanks" data-track-section="thanks">
+    <div class="wrap">
+      <div class="panel panel-thanks">
+        <div class="thanks-copy">
+          <p class="eyebrow" data-i18n="d_eyebrow">Bestätigt</p>
+          <h1 class="h2 split" data-i18n-html="d_title">Du stehst auf<br>der Liste.</h1>
+          <svg class="notch" viewBox="0 0 1000 12" preserveAspectRatio="none" aria-hidden="true"><path d="M0 11 H560 L580 1 H1000"/></svg>
+          <p class="body body-lg" data-i18n="d_p">Danke fürs Bestätigen.</p>
+          <div class="thanks-actions">
+            <a class="btn btn-ghost" href="index.html" data-i18n="d_back">Zurück zur Seite</a>
+          </div>
+          <div class="thanks-share">
+            <p class="body" data-i18n="d_share">Du kennst jemanden, der oft in die Sauna geht? Schick ihm den Link.</p>
+            <button class="btn btn-ghost" type="button" id="copy-link"><span data-i18n="d_copy">Link kopieren</span></button>
+          </div>
+        </div>
+        <figure class="split-photo"><img src="assets/img/capsule-sm.webp" srcset="assets/img/capsule-sm.webp 640w, assets/img/capsule.webp 1200w" sizes="(min-width: 900px) 40vw, 92vw" width="1200" height="1500" alt="" data-i18n-alt="alt_capsule"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="legal-foot">
+  <span>© 2026 Escape Velocity Rituals</span>
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="#" data-consent-open hidden>Cookie-Einstellungen</a>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var T = window.EVR_TRACK;
+  if (T) { T.event("waitlist_confirmed", {}); T.pixel("CompleteRegistration", { content_name: "Cold Core waitlist" }); }
+  var b = document.getElementById("copy-link");
+  if (!b) return;
+  b.addEventListener("click", function () {
+    var url = location.href.split("danke.html")[0] + "?utm_source=referral&utm_medium=share";
+    var done = function () { var s = b.querySelector("span"); s.textContent = (window.EVR_T ? window.EVR_T("d_copied") : "Kopiert"); if (T) T.event("share_link_copied", {}); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done); else done();
+  });
+})();
+</script>
+</body>
+</html>

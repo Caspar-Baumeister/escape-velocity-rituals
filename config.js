@@ -1,22 +1,38 @@
 /* Escape Velocity Rituals: everything Caspar may want to change lives here. */
 window.EVR_CONFIG = {
-  // Where signups go. "formsubmit" works without an account: the very first signup
-  // triggers an activation mail to the address below, click "Activate Form" once.
-  // Switch to "web3forms" and paste a key if you prefer Web3Forms.
+  /* ---------- Waitlist ---------- */
+  // Where signups go: "loops", "brevo" or "formsubmit".
+  //   loops:      paste the form ID from Loops (Forms, Custom form, the part after /newsletter-form/)
+  //   brevo:      paste the form action URL from Brevo (Kontakte, Formulare, Formular, HTML-Code, action="...")
+  //   formsubmit: no account; the very first signup sends an activation mail, click "Activate Form" once.
   formProvider: "formsubmit",
+  loopsFormId: "",
+  loopsUserGroup: "waitlist",
+  // true: also send saunaFrequency, language and utm fields (create these contact properties in Loops first).
+  loopsSendExtras: false,
+  brevoFormUrl: "",
+  brevoFields: { email: "EMAIL", firstName: "FIRSTNAME", source: "SOURCE" },
   formsubmitEndpoint: "https://formsubmit.co/ajax/caspar.baumeister.privat@gmail.com",
-  web3formsKey: "",
+  // true as soon as the email tool sends a confirmation link (double opt in).
+  // The confirmation link should point to danke.html on this site.
+  doubleOptIn: false,
 
+  /* ---------- Tracking ---------- */
+  // PostHog EU project API key (starts with phc_). Empty = no analytics at all.
+  posthogKey: "",
+  posthogHost: "https://eu.i.posthog.com",
+  // true: no storage on the device at all. Needs "Cookieless server hash mode" switched on
+  // in the PostHog project settings (Settings, Project, Web analytics), otherwise use false.
+  posthogCookieless: true,
+  // Meta Pixel / Dataset ID (only digits). Empty = no pixel and no cookie banner.
+  metaPixelId: "",
+
+  /* ---------- Offer ---------- */
   // Planned price in euros and the early access discount for the waitlist.
   priceEUR: 49,
   earlyAccessPercent: 50,
 
-  // Shown if the form cannot be sent.
+  /* ---------- Misc ---------- */
   contactEmail: "caspar.baumeister.privat@gmail.com",
-
-  // Horizontal position of the capsule in the hero on wide screens (0.5 = centre).
-  heroFocusX: 0.62,
-
-  // Default language: "de" or "en".
   defaultLang: "de"
 };

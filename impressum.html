@@ -5,18 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Impressum · Escape Velocity Rituals</title>
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#050706">
+<meta name="theme-color" content="#030405">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="stylesheet" href="css/style.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/analytics.js"></script>
 </head>
 <body>
-<header class="bar solid">
-  <a class="brand" href="index.html" aria-label="Escape Velocity Rituals, zur Startseite">
-    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    <span class="wordmark"><span class="wm-1">Escape Velocity</span><span class="wm-2">Rituals</span></span>
+<header class="bar solid page-bar" id="bar">
+  <nav class="bar-links" aria-label="Seite">
+    <a href="index.html#ritual" data-i18n="nav_core">Cold Core</a>
+    <a href="index.html#science" data-i18n="nav_science">Forschung</a>
+    <a href="index.html#faq" data-i18n="nav_faq">Fragen</a>
+  </nav>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <a class="wordmark" href="index.html" aria-label="Escape Velocity Rituals, zur Startseite">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Escape Velocity</span>
   </a>
-  <nav class="bar-actions"><a class="btn btn-small" href="index.html#waitlist">Warteliste</a></nav>
+  <span class="bar-rule" aria-hidden="true"></span>
+  <div class="bar-right">
+    <a class="bar-cta" href="index.html#waitlist"><span data-i18n="nav_cta">Warteliste</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+  </div>
 </header>
 <main class="legal">
 <h1>Impressum</h1>
@@ -39,12 +51,11 @@
 <h2>Hinweis zum Produkt</h2>
 <p>Cold Core befindet sich in Entwicklung und ist noch nicht erhältlich. Abbildungen sind Visualisierungen und können vom fertigen Produkt abweichen. Cold Core ist ein Komfortprodukt für die Sauna und kein Medizinprodukt.</p>
 </main>
-<footer class="foot">
-  <div class="foot-brand">
-    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="27" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 39 C 16 41, 30 30, 44 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    <p>Escape Velocity Rituals. Kleine Rituale für ein langes Leben.</p>
-  </div>
-  <nav class="foot-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><span>© 2026</span></nav>
+<footer class="legal-foot">
+  <span>© 2026 Escape Velocity Rituals</span>
+  <a href="impressum.html">Impressum</a>
+  <a href="datenschutz.html">Datenschutz</a>
+  <a href="#" data-consent-open hidden>Cookie-Einstellungen</a>
 </footer>
 </body>
 </html>

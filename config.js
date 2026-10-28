@@ -22,7 +22,7 @@ window.EVR_CONFIG = {
   /* ---------- Tracking ---------- */
   // PostHog EU project API key (starts with phc_). Empty = no analytics at all.
   posthogKey: "phc_no9R6nzjAhWdkDntRw9E3dQ9UtY6f2XwVSWMD4rWhAhU",
-  posthogHost: "https://eu.i.posthog.com",
+  posthogHost: "https://r.escapevelocityrituals.com",
   // true: no storage on the device at all. Needs "Cookieless server hash mode" switched on
   // in the PostHog project settings (Settings, Project, Web analytics), otherwise use false.
   posthogCookieless: true,

@@ -136,7 +136,10 @@
   /* ---------- public API ---------- */
   var fired = {};
   function track(name, props) {
-    if (ph) { try { ph.capture(name, props || {}); } catch (e) { /* ignore */ } }
+    // Always use the live instance: the loader stub is replaced once array.js has loaded,
+    // and calls on the old stub would never be sent.
+    var cur = ph ? (window.posthog || ph) : null;
+    if (cur) { try { cur.capture(name, props || {}); } catch (e) { /* ignore */ } }
     if (window.EVR_DEBUG && window.console) console.log("[evr]", name, props || {});
   }
   function once(name, props) { if (fired[name]) return; fired[name] = 1; track(name, props); }
